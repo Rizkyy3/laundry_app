@@ -28,7 +28,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Counter App')),
+      appBar: AppBar(
+        title: Text('Counter App')
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
