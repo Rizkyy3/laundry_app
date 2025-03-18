@@ -5,6 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: MyHomePage());
@@ -29,16 +30,20 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter App')
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Kamu sudah menekan tombol ini:'),
-            Text('$_counter kali', style: TextStyle(fontSize: 24)),
-          ],
+        title: Text('LaundryQ'),
+        backgroundColor: Color(0xFF0000FF), // Warna biru
+      ),
+      body: Container(
+        color: Colors.white, // Warna putih
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/image 16.png', width: 400, height: 400),
+              Text('Kamu sudah menekan tombol ini:'),
+              Text('$_counter kali', style: TextStyle(fontSize: 24)),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
